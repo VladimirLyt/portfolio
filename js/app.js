@@ -159,7 +159,6 @@
   function route() {
     const hash = location.hash.slice(1);
     const page = ['about', 'archive'].includes(hash) ? hash : 'home';
-    document.documentElement.classList.toggle('snap-projects', page === 'home');
     pages.forEach(node => { node.hidden = node.dataset.page !== page; });
     document.querySelectorAll('[data-nav]').forEach(link => {
       if (link.dataset.nav === page) link.setAttribute('aria-current', 'page');

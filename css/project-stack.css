@@ -2,8 +2,8 @@
 .projects-section { --project-gutter: 48px; font-family: Manrope, Arial, sans-serif; max-width: 1440px; margin-inline: auto; padding: 0 var(--project-gutter) 64px; color: #000; }
 .projects-section > h2 { text-align: center; font-size: 36px; line-height: 49px; font-weight: 400; margin: 0 0 36px; }
 .project-stack { padding-bottom: 36px; isolation: isolate; }
-.project-panel { --pin-top: 24px; position: sticky; top: var(--pin-top); background: var(--bg); border-top: 1px solid #dedede; padding: 36px 0 36px; scroll-snap-align: start; scroll-margin-top: var(--pin-top); transform-origin: center top; }
-.project-panel + .project-panel { --pin-top: 48px; z-index: 2; border-top-color: transparent; }
+.project-panel { --pin-top: 24px; position: sticky; top: var(--pin-top); background: var(--bg); border-top: 1px solid #dedede; padding: 36px 0 36px; scroll-margin-top: var(--pin-top); transform-origin: center top; }
+.project-panel + .project-panel { --pin-top: 48px; z-index: 2; border-top-color: transparent; margin-top: clamp(80px, 12vh, 128px); }
 .project-panel-inner { display: grid; grid-template-columns: 435px minmax(0, 1fr); grid-template-areas: 'tags visit' 'summary art'; gap: 32px 20px; align-items: start; }
 .project-tags { grid-area: tags; display: flex; width: max-content; gap: 8px; flex-wrap: wrap; align-items: center; }
 .project-tags span { border-radius: 39px; background: #d7d7d7; padding: 10px 16px; font-size: 16px; line-height: 22px; font-weight: 500; white-space: nowrap; }
@@ -42,7 +42,6 @@
 .project-patent-icon img { position: absolute; left: -46.18%; top: -31.4%; width: 192.36%; height: 192.36%; }
 .project-ideas { left: calc(49900% / var(--art-base)); top: calc(16100% / 457); width: calc(48700% / var(--art-base)); height: auto; }
 .project-mini-button { left: 0; top: calc(19800% / 457); width: calc(11932.4% / var(--art-base)); height: calc(3626.5% / 457); border-radius: .8083cqw; background: linear-gradient(#5e8fed, #2f6fe8); color: #fff; text-align: center; font: 600 1.4146cqw/2.882cqw Inter, Arial, sans-serif; padding-top: .8088cqw; }
-html.snap-projects { scroll-snap-type: y proximity; }
 .project-panel.is-too-tall { position: relative; top: auto; }
 .project-panel.is-overlapping { border-radius: 20px 20px 0 0; box-shadow: 0 -16px 30px -28px rgb(0 0 0 / .3); }
 @media (max-width: 1199px) {
@@ -83,6 +82,5 @@ html.snap-projects { scroll-snap-type: y proximity; }
   .project-panel + .project-panel .project-visit { margin-top: 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  html.snap-projects { scroll-snap-type: none; }
   .project-panel { position: relative; top: auto; }
 }
