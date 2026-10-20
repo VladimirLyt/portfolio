@@ -1,0 +1,104 @@
+@font-face { font-family: Manrope; src: url('../assets/hero/manrope.ttf') format('truetype'); font-style: normal; font-weight: 200 800; font-display: swap; }
+:root { --bg: #f2f2f2; }
+.portfolio-header, .portfolio-hero { font-family: Manrope, Arial, sans-serif; color: #000; max-width: 1440px; margin-inline: auto; }
+.portfolio-header { height: 106px; padding: 24px 5.55556%; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 5; font-size: 16px; font-weight: 500; }
+.portfolio-name { white-space: nowrap; }
+.portfolio-nav { position: absolute; left: 50%; transform: translateX(-50%); top: 24px; display: flex; gap: 8px; padding: 8px; background: #fff; border-radius: 139px; }
+.portfolio-nav a { padding: 10px 16px; border-radius: 39px; line-height: 22px; white-space: nowrap; }
+.portfolio-nav a[aria-current] { background: #f2f2f2; }
+.portfolio-contact { background: #000; color: #fff; padding: 10px 16px; line-height: 22px; border-radius: 39px; }
+.menu-toggle { display: none; }
+.portfolio-hero { height: 594px; position: relative; isolation: isolate; }
+.hero-intro { position: relative; z-index: 2; padding-top: 82px; margin-left: 5.55556%; width: 458px; }
+.hero-intro h1 { font-size: 40px; font-weight: 600; line-height: 1.2; letter-spacing: 0; }
+.greeting { white-space: nowrap; }
+.greeting-icon { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; background: #fff; border-radius: 10.4px; vertical-align: top; margin-inline: 3px; }
+.greeting-icon img { display: block; }
+.hero-description { width: 413px; margin-top: 16px; font-size: 20px; line-height: 27px; color: #3a3a3a; text-wrap: balance; }
+.hero-cv { margin-top: 52px; display: inline-flex; gap: 8px; padding: 12px 24px; align-items: center; background: #fff; border-radius: 39px; font-size: 20px; font-weight: 500; line-height: 27px; }
+.hero-cv img, .hero-smile img, .scene-status img { display: block; }
+.hero-scene { position: absolute; top: -21px; left: 33.95833%; width: 39.375%; max-width: 567px; aspect-ratio: 1; container-type: inline-size; }
+.scene-union { position: absolute; left: 14.92%; top: 11.25%; width: 79.956%; height: auto; pointer-events: none; }
+.hero-tablet-portrait { display: none; }
+.scene-house { position: absolute; width: 93.0185%; height: auto; left: 3.49075%; top: 3.49075%; transform: rotate(-4.48deg); pointer-events: none; }
+.scene-portrait { position: absolute; left: 55.379%; top: 11.2875%; width: 21.164%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; background: #fff; }
+.scene-status { position: absolute; left: 10.582%; top: 63.845%; display: flex; flex-direction: column; align-items: start; gap: 2.014cqw; padding: 2.685cqw; background: #fff; border-radius: 2.853cqw; }
+.scene-status span { font-size: 3.1746cqw; line-height: 1.1; color: rgb(0 0 0 / .7); white-space: nowrap; }
+.hero-labels { position: absolute; right: 5.55556%; top: 163px; display: flex; flex-direction: column; gap: 12px; align-items: end; z-index: 3; font-size: 36px; font-weight: 500; line-height: 40px; }
+.hero-specialty { display: flex; gap: 8px; align-items: center; }
+.hero-smile { width: 60px; height: 60px; display: grid; place-items: center; border-radius: 13px; background: #fff; }
+.hero-discipline, .hero-edition { padding: 10px 20px; border-radius: 13px; background: #fff; white-space: nowrap; }
+.hero-discipline { background: #85a0c7; color: #fff; text-transform: uppercase; }
+.portfolio-header a:hover, .hero-cv:hover { color: #47658f; }
+.portfolio-contact:hover { color: #fff !important; background: #324766; }
+@media (min-width: 701px) and (max-width: 1199px) {
+  .portfolio-header { height: 83px; padding: 22px 32px 22px 35px; font-size: 14px; }
+  .portfolio-nav { top: 14px; }
+  .portfolio-nav a, .portfolio-contact { line-height: 19px; }
+  .portfolio-hero { height: 617px; overflow: hidden; }
+  .hero-intro { width: 361px; margin-left: 32px; padding-top: 83px; }
+  .hero-intro h1 { font-size: 28px; }
+  .greeting-icon { width: 36px; height: 36px; margin-inline: 3px; border-radius: 7.8px; }
+  .greeting-icon img { width: 18px; height: 18px; }
+  .hero-description { width: 300px; margin: 9px 0 0 3px; font-size: 14px; line-height: 19px; color: #717171; text-wrap: initial; }
+  .hero-cv { margin-top: 20px; font-size: 15px; line-height: 20px; }
+  .hero-cv img { width: 20px; height: 20px; }
+  .hero-labels { font-size: 24px; line-height: 26px; top: 135px; right: 32px; gap: 8px; }
+  .hero-smile { width: 46px; height: 46px; border-radius: 9.967px; }
+  .hero-smile img { width: 24px; height: 24px; }
+  .hero-scene { top: -14px; width: 414.109px; max-width: none; left: calc(58.33333% - 48.28px); transform: translateX(-50%); }
+  .scene-portrait { width: 88px; }
+  .scene-status span { font-size: 13px; }
+  .scene-status img { width: 8.339px; height: 8.339px; }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .hero-intro { padding-top: 123px; }
+  .hero-scene { top: -1px; left: calc(75% - 14.95px); }
+  .scene-portrait { display: none; }
+  .hero-tablet-portrait { display: block; position: absolute; top: 39px; left: 32px; width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
+  .hero-labels { top: 100px; right: 33px; }
+}
+@media (max-width: 700px) {
+  .portfolio-header { height: 83px; padding: 22px 16px; font-size: 14px; gap: 8px; }
+  .portfolio-name { margin-right: auto; }
+  .portfolio-contact { padding: 10px 16px; line-height: 19px; }
+  .menu-toggle { display: grid; place-items: center; padding: 9.5px 16px; background: #fff; border-radius: 39px; }
+  .portfolio-nav { display: none; top: 70px; left: auto; right: 16px; transform: none; box-shadow: 0 10px 35px #0001; border-radius: 20px; }
+  .portfolio-nav.is-open { display: flex; }
+  .portfolio-nav a { padding: 10px 12px; font-size: 14px; }
+  .portfolio-hero { --scene-size: min(414.109px, calc(100vw - 32px)); --labels-top: calc(222px + var(--scene-size) * .88625 + 36px); height: calc(var(--labels-top) + 140px); overflow: hidden; }
+  .hero-intro { padding-top: 26px; margin-inline: 16px; width: auto; }
+  .hero-intro h1 { font-size: 28px; line-height: 1.2; }
+  .greeting-icon { width: 36px; height: 36px; margin-inline: 3px; border-radius: 7.8px; }
+  .greeting-icon img { width: 18px; height: 18px; }
+  .hero-description { width: 300px; max-width: 100%; font-size: 14px; line-height: 19px; color: #717171; margin-top: 9px; text-wrap: initial; }
+  .hero-cv { font-size: 15px; line-height: 20px; margin-top: 20px; padding: 12px 24px; }
+  .hero-cv img { width: 20px; height: 20px; }
+  .hero-scene { width: var(--scene-size); max-width: none; left: 50%; transform: translateX(-50%); top: 222px; }
+  .scene-portrait { width: 21.25%; }
+  .scene-status { font-size: 13px; }
+  .scene-status span { font-size: 3.1393cqw; }
+  .scene-status img { width: 2.014cqw; height: 2.014cqw; }
+  .hero-labels { top: var(--labels-top); right: auto; left: calc(50% + 5.5px); transform: translateX(-50%); align-items: center; gap: 8px; font-size: 24px; line-height: 26px; }
+  .hero-smile { width: 46px; height: 46px; border-radius: 9.967px; }
+  .hero-smile img { width: 24px; height: 24px; }
+}
+/* Композиция 575: небольшие плашки справа над иллюстрацией. */
+@media (min-width: 480px) and (max-width: 700px) {
+  .portfolio-hero { height: 617px; }
+  .hero-scene { top: 137px; left: clamp(calc(var(--scene-size) / 2 + 16px), calc(58.33333% + 28.64px), calc(100% - var(--scene-size) / 2 - 16px)); }
+  .hero-labels { top: 26px; left: auto; right: 16px; transform: none; align-items: end; font-size: 15px; line-height: 16.5px; }
+  .hero-specialty { display: contents; }
+  .hero-smile { width: 36px; height: 36px; border-radius: 7.8px; }
+  .hero-smile img { width: 18.783px; height: 18.783px; }
+  .hero-discipline, .hero-edition { padding: 9.474px 18.947px; border-radius: 12.316px; }
+}
+@media (max-width: 374px) {
+  .portfolio-header { padding-inline: 12px; gap: 6px; }
+  .portfolio-name { font-size: 12px; }
+  .portfolio-contact { padding-inline: 12px; }
+  .menu-toggle { padding-inline: 12px; }
+  .hero-intro { margin-inline: 12px; }
+  .hero-intro h1 { font-size: 24px; }
+  .greeting-icon { width: 30px; height: 30px; margin-inline: 1px; }
+}
