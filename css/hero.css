@@ -74,12 +74,12 @@
   .hero-description { width: 300px; max-width: 100%; font-size: 14px; line-height: 19px; color: #717171; margin-top: 9px; text-wrap: initial; }
   .hero-cv { font-size: 15px; line-height: 20px; margin-top: 20px; padding: 12px 24px; }
   .hero-cv img { width: 20px; height: 20px; }
-  .hero-scene { width: var(--scene-size); max-width: none; left: 50%; transform: translateX(-50%); top: 222px; }
+  .hero-scene { width: var(--scene-size); max-width: none; left: calc(50% - var(--scene-size) * .04898); transform: translateX(-50%); top: 222px; }
   .scene-portrait { width: 21.25%; }
   .scene-status { font-size: 13px; }
   .scene-status span { font-size: 3.1393cqw; }
   .scene-status img { width: 2.014cqw; height: 2.014cqw; }
-  .hero-labels { top: var(--labels-top); right: auto; left: calc(50% + 5.5px); transform: translateX(-50%); align-items: center; gap: 8px; font-size: 24px; line-height: 26px; }
+  .hero-labels { top: var(--labels-top); right: auto; left: 50%; transform: translateX(-50%); align-items: center; gap: 8px; font-size: 24px; line-height: 26px; }
   .hero-smile { width: 46px; height: 46px; border-radius: 9.967px; }
   .hero-smile img { width: 24px; height: 24px; }
 }
