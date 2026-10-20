@@ -159,6 +159,7 @@
   function route() {
     const hash = location.hash.slice(1);
     const page = ['about', 'archive'].includes(hash) ? hash : 'home';
+    document.documentElement.classList.toggle('snap-projects', page === 'home');
     pages.forEach(node => { node.hidden = node.dataset.page !== page; });
     document.querySelectorAll('[data-nav]').forEach(link => {
       if (link.dataset.nav === page) link.setAttribute('aria-current', 'page');
@@ -171,9 +172,32 @@
     currentPage = page;
   }
 
-  const featured = projects.filter(p => p.featured);
-  document.querySelector('#featured-grid').replaceChildren(...featured.map(p => card(p, true)));
-  document.querySelector('#selected-title .sup').textContent = String(featured.length).padStart(2, '0');
+  // Pin only cards that fit the viewport, so all content stays reachable on short screens.
+  const projectPanels = [...document.querySelectorAll('.project-panel')];
+  const resizeProjects = new ResizeObserver(() => {
+    projectPanels.forEach(panel => {
+      const offset = parseFloat(getComputedStyle(panel).getPropertyValue('--pin-top')) || 0;
+      panel.classList.toggle('is-too-tall', panel.offsetHeight + offset + 12 > window.innerHeight);
+    });
+  });
+  projectPanels.forEach(panel => resizeProjects.observe(panel));
+  let stackFrame = 0;
+  window.addEventListener('scroll', () => {
+    if (stackFrame) return;
+    stackFrame = requestAnimationFrame(() => {
+      projectPanels.forEach((panel, index) => {
+        const previous = projectPanels[index - 1];
+        panel.classList.toggle('is-overlapping', Boolean(previous) &&
+          !panel.classList.contains('is-too-tall') &&
+          panel.getBoundingClientRect().top < previous.getBoundingClientRect().bottom - 2);
+      });
+      stackFrame = 0;
+    });
+  }, { passive: true });
+  window.addEventListener('resize', () => projectPanels.forEach(panel => {
+    const offset = parseFloat(getComputedStyle(panel).getPropertyValue('--pin-top')) || 0;
+    panel.classList.toggle('is-too-tall', panel.offsetHeight + offset + 12 > window.innerHeight);
+  }));
   document.querySelector('#archive-count').textContent = String(archiveProjects.length).padStart(2, '0');
   document.querySelector('#total-count').textContent = archiveProjects.length;
   document.querySelector('#year').textContent = new Date().getFullYear();
