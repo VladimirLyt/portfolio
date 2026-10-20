@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личное портфолио: избранные работы, немного обо мне и архив дизайн-экспериментов.">
+  <meta name="theme-color" content="#f8f8f4">
+  <title>Портфолио — дизайн и эксперименты</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/hero/manrope.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/hero.css?v=3">
+  <script src="js/projects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <header class="portfolio-header">
+    <a class="portfolio-name" href="#home">Лыткин Владимир</a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="portfolio-nav"><img src="assets/hero/menu.svg" width="20" height="20" alt=""></button>
+    <nav class="portfolio-nav" id="portfolio-nav" aria-label="Основная навигация">
+      <a href="#home" data-nav="home">Главная</a>
+      <a href="#about" data-nav="about">Обо мне</a>
+      <a href="#archive" data-nav="archive">Архив <span id="archive-count" hidden></span></a>
+    </nav>
+    <a class="portfolio-contact" href="mailto:dom56f@gmail.com">Связаться</a>
+  </header>
+
+  <main id="main">
+    <div data-page="home">
+      <section class="portfolio-hero" aria-labelledby="hero-title">
+        <img class="hero-tablet-portrait" src="assets/hero/portrait.png" width="72" height="72" alt="Владимир Лыткин">
+        <div class="hero-intro">
+          <h1 id="hero-title"><span class="greeting">Привет, <span class="greeting-icon"><picture><source media="(max-width: 1199px)" srcset="assets/hero/astroid-mobile.svg"><img src="assets/hero/astroid.svg" width="24" height="24" alt=""></picture></span> я Владимир</span><br>Рад видеть вас<br>в своем портфолио</h1>
+          <p class="hero-description">Проектирую удобные интерфейсы, создаю 3D-графику и собираю аккуратные сайты</p>
+          <a class="hero-cv" href="#about">Посмотреть CV <picture><source media="(max-width: 1199px)" srcset="assets/hero/arrow-mobile.svg"><img src="assets/hero/arrow.svg" width="28" height="28" alt=""></picture></a>
+        </div>
+        <div class="hero-scene">
+          <img class="scene-union" src="assets/hero/union-1.svg" alt="" aria-hidden="true">
+          <img class="scene-house" src="assets/hero/house.png" width="528" height="528" alt="Синий объёмный дом">
+          <img class="scene-portrait" src="assets/hero/portrait.png" width="120" height="120" alt="Владимир Лыткин">
+          <div class="scene-status"><picture><source media="(max-width: 1199px)" srcset="assets/hero/status-mobile.svg"><img src="assets/hero/status.svg" width="11.418" height="11.418" alt=""></picture><span>В активном<br>поиске работы</span></div>
+        </div>
+        <div class="hero-labels"><div class="hero-specialty"><span class="hero-smile"><picture><source media="(min-width: 480px) and (max-width: 700px)" srcset="assets/hero/smile-575.svg"><source media="(max-width: 1199px)" srcset="assets/hero/smile-mobile.svg"><img src="assets/hero/smile.svg" width="32" height="32" alt=""></picture></span><span class="hero-discipline">UI/UX &amp; Web</span></div><span class="hero-edition">2026 Portfolio</span></div>
+      </section>
+      <section class="selected section" id="selected" aria-labelledby="selected-title"><div class="section-heading"><div><span class="eyebrow">01 / От идеи до результата</span><h2 id="selected-title">Избранные работы<span class="sup">05</span></h2></div><span class="muted">Сайты, цифровые продукты<br>и решения для разных задач.</span></div><div class="featured-grid" id="featured-grid"></div><a class="text-link" href="#archive">Ещё больше экспериментов в архиве <span>↗</span></a></section>
+      <section class="about-teaser section"><span class="eyebrow">02 / Человек за проектами</span><div><h2>Любопытство —<br>моя отправная точка<span class="accent">.</span></h2><p>Мне интересно, как форма влияет на ощущение, а маленькие детали делают привычное особенным.</p><a class="pill" href="#about">Немного обо мне <span>↗</span></a></div><span class="asterisk" aria-hidden="true">✳</span></section>
+    </div>
+
+    <section class="about-page section" data-page="about" hidden aria-labelledby="about-title"><span class="eyebrow">Немного личного / About</span><h1 id="about-title">За каждым проектом —<br><em>любопытный человек.</em></h1><div class="about-layout"><div class="portrait-placeholder"><span class="portrait-symbol" aria-hidden="true">☺</span><span>Место для вашего фото</span></div><div class="about-copy"><span class="eyebrow">Привет, я [ваше имя]</span><h2>Делаю сложное<br>понятным и живым.</h2><p>Здесь будет ваша история: чем вы занимаетесь, что вам интересно и какой подход к работе вам близок. Замените этот текст на несколько честных предложений о себе.</p><p>Этот сайт — пространство для больших проектов, маленьких находок и идей, которым хочется дать форму.</p><div class="skills"><span>Веб-дизайн</span><span>Интерфейсы</span><span>Визуальные эксперименты</span></div><div class="contact-placeholder"><span class="eyebrow">На связи</span><p>Добавьте здесь свою почту и ссылки на соцсети.</p></div></div></div></section>
+
+    <section class="archive-page section" data-page="archive" hidden aria-labelledby="archive-title"><div class="archive-intro"><span class="eyebrow">Коллекция идей / В процессе и вне рамок</span><h1 id="archive-title">Архив<span class="accent">*</span></h1><div class="archive-caption"><p>Маленькие проекты. Случайные находки.<br>Эксперименты без большого повода.</p><span class="hand-note">Нажмите на работу,<br>чтобы узнать чуть больше ↙</span></div></div><div class="archive-toolbar"><div class="filters" role="group" aria-label="Фильтр по категории"><button class="filter active" type="button" data-filter="all" aria-pressed="true">Всё <span id="total-count"></span></button><button class="filter" type="button" data-filter="web" aria-pressed="false">Веб</button><button class="filter" type="button" data-filter="identity" aria-pressed="false">Айдентика</button><button class="filter" type="button" data-filter="experiment" aria-pressed="false">Эксперименты</button></div><span class="eyebrow" id="results-count" aria-live="polite"></span></div><p class="demo-note">Демо-коллекция. Замените примеры своими проектами в js/projects.js.</p><div class="masonry" id="archive-grid"></div></section>
+    <noscript><p class="noscript">Для просмотра работ и разделов сайта включите JavaScript.</p></noscript>
+  </main>
+
+  <footer class="footer"><a class="wordmark" href="#home" aria-label="На главную">p<span class="brand-dot">.</span></a><span>Сделано с вниманием к деталям.</span><a href="#home">Вернуться в начало ↑</a><span class="copyright">© <span id="year"></span> / Портфолио</span></footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="modal-title"><button class="modal-close" type="button" aria-label="Закрыть проект">✕</button><div class="modal-art" id="modal-art"></div><div class="modal-copy"><span class="eyebrow" id="modal-meta"></span><h2 id="modal-title"></h2><p id="modal-description"></p><div class="modal-tags" id="modal-tags"></div><p class="modal-demo">Демонстрационный проект · замените на свою работу</p></div><div id="modal-case" class="modal-case" hidden></div></dialog>
+</body>
+</html>
