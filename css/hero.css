@@ -83,16 +83,6 @@
   .hero-smile { width: 46px; height: 46px; border-radius: 9.967px; }
   .hero-smile img { width: 24px; height: 24px; }
 }
-/* Композиция 575: небольшие плашки справа над иллюстрацией. */
-@media (min-width: 480px) and (max-width: 700px) {
-  .portfolio-hero { height: 617px; }
-  .hero-scene { top: 137px; left: clamp(calc(var(--scene-size) / 2 + 16px), calc(58.33333% + 28.64px), calc(100% - var(--scene-size) / 2 - 16px)); }
-  .hero-labels { top: 26px; left: auto; right: 16px; transform: none; align-items: end; font-size: 15px; line-height: 16.5px; }
-  .hero-specialty { display: contents; }
-  .hero-smile { width: 36px; height: 36px; border-radius: 7.8px; }
-  .hero-smile img { width: 18.783px; height: 18.783px; }
-  .hero-discipline, .hero-edition { padding: 9.474px 18.947px; border-radius: 12.316px; }
-}
 @media (max-width: 374px) {
   .portfolio-header { padding-inline: 12px; gap: 6px; }
   .portfolio-name { font-size: 12px; }
